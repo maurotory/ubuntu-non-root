@@ -12,6 +12,7 @@ spec:
   containers:
   - image: mauritori/busybox
     name: busybox
+    command: ["sleep", "infinity"]
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
