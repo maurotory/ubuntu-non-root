@@ -1,0 +1,4 @@
+Application {{ .Chart.Name }} is running correctly. Use the application for debugging:
+
+export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
+kubectl exec --namespace {{ .Release.Namespace }} {{ .Release.Namespace }} $POD_NAME -- bash
